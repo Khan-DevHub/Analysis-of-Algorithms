@@ -1,0 +1,31 @@
+Algorithm:
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            a = b + c;
+        }
+    }
+Analysis:
+    Step 1:
+        Outer loop runs n times.
+
+    Step 2:
+        Inner loop runs n times for each outer loop.
+        So: n × n = n²
+
+    Step 3:
+        a = b + c
+        This also runs n × n times.
+        n × n = n²
+
+    Step 4:
+        The main terms are:
+        n² + n²
+        = 2n²
+
+    Step 5:
+        Ignore the constant 2.
+
+Final Time Complexity:
+O(n²)
