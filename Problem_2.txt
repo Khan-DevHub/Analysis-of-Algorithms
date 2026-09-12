@@ -1,0 +1,25 @@
+Algorithm:
+	for (int i = 0; i < n; i++)
+	{
+		a = b + c;
+	}
+
+Analysis:
+	Step 1:
+		Outer loop runs n times.
+
+	Step 2:
+		a = b + c
+		This statement runs n times.
+		= n
+
+	Step 3:
+		The main terms are:
+		n + n
+		= 2n
+
+	Step 4:
+		Ignore the constant 2.
+
+Final Time Complexity:
+	O(n)
