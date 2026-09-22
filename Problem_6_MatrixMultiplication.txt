@@ -1,0 +1,104 @@
+Problem: Matrix Multiplication
+
+Algorithm:
+    arr3 = {0};
+
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            arr3(i,j) = 0;
+
+            for(k = 0; k < n; k++)
+            {
+                arr3(i,j) = arr3(i,j) + arr1(i,k) * arr2(k,j);
+            }
+        }
+    }
+
+    Return 0;
+
+Analysis:
+
+    Step 1:
+        arr3 = {0};
+        Count = 1
+
+    Step 2:
+        Outer loop:
+
+        i = 0
+        Count = 1
+
+        i < n
+        Count = n + 1
+
+        i++
+        Count = n
+
+    Step 3:
+        Middle loop runs n times because it is inside the outer loop.
+
+        j = 0
+        Count = n
+
+        j < n
+        Count = n(n + 1)
+        Count = n² + n
+
+        j++
+        Count = n²
+
+    Step 4:
+        arr3(i,j) = 0;
+        Count = n²
+
+    Step 5:
+        Inner loop runs n times for every i and j combination.
+
+        k = 0
+        Count = n²
+
+        k < n
+        Count = n²(n + 1)
+        Count = n³ + n²
+
+        k++
+        Count = n³
+
+    Step 6:
+        arr3(i,j) = arr3(i,j) + arr1(i,k) * arr2(k,j);
+
+        Count = n³
+
+    Step 7:
+        Return 0;
+        Count = 1
+
+Total Step Count:
+
+arr3 = {0} → 1
+i = 0 → 1
+i < n → n + 1
+i++ → n
+j = 0 → n
+j < n → n² + n
+j++ → n²
+arr3(i,j) = 0 → n²
+k = 0 → n²
+k < n → n³ + n²
+k++ → n³
+arr3(i,j) = arr3(i,j) + arr1(i,k) * arr2(k,j) → n³
+Return 0 → 1
+
+Total:
+1 + 1 + (n + 1) + n + n + (n² + n) + n² + n²
++ (n³ + n²) + n³ + n³ + 1
+
+= 3n³ + 4n² + 3n + 3
+
+Final Time Complexity:
+O(n³)
+
+Space Complexity:
+    O(n²)
