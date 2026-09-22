@@ -1,0 +1,41 @@
+Algorithm:
+    p = 0
+    for(i = 1; p <= n; i++)
+    {
+        p = p + i;
+    }
+
+Analysis:
+    p = 0 → 1
+    i = 1 → 1
+    p <= n → k + 1
+    i++ → k
+    p = p + i → k
+
+Mathematical Reason:
+    p = 1 + 2 + 3 + ... + k
+    p = k(k + 1) / 2
+    Since the loop continues while:
+    p <= n
+
+    Therefore:
+    k(k + 1) / 2 <= n
+
+    Approximately:
+    k² / 2 <= n
+    k² <= 2n
+    k <= √(2n)
+
+    Therefore:
+    k = Θ(√n)
+
+Total Step Count:
+    1 + 1 + (k + 1) + k + k
+    = 3k + 3
+
+Final Step Count:
+    3k + 3
+
+Final Time Complexity:
+    O(√n)
+    Here k represents the number of times the loop executes.
