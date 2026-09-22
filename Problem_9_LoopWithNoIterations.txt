@@ -1,0 +1,25 @@
+Algorithm:
+    for(i = n; i < n; i = i + 20)
+    {
+        a = b + c;
+    }
+
+Analysis:
+    i = n → 1
+    i < n → 1
+    Since i = n:
+    n < n → False
+    Therefore:
+    i = i + 20 → 0
+    a = b + c → 0
+
+Total Step Count:
+    1 + 1 + 0 + 0
+    = 2
+
+Final Step Count:
+    2
+
+Final Time Complexity:
+
+    O(1)
