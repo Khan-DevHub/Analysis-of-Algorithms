@@ -1,0 +1,32 @@
+Algorithm:
+    for(i = 0; i * i < n; i++)
+    {
+        a = b + c;
+    }
+
+Analysis:
+    i = 0 → 1
+    i * i < n → k + 1
+    i++ → k
+    a = b + c → k
+
+Mathematical Reason:
+    The loop condition is:
+    i * i < n
+    i² < n
+    Therefore:
+    i < √n
+
+    Let k be the number of iterations.
+    Therefore:
+    k = Θ(√n)
+
+Total Step Count:
+    1 + (k + 1) + k + k
+    = 3k + 2
+
+Final Step Count:
+    3k + 2
+
+Final Time Complexity:
+    O(√n)
